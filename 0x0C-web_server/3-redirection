@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#  bash script to make /redirect_me redirect to another site
+# bash script to make /redirect_me redirect to another site
 ADD301_REDIRECT="\\\trewrite ^/redirect_me https://github.com/abel-udoh permanent;"
 
 sudo apt-get update
