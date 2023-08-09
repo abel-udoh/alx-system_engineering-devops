@@ -1,14 +1,18 @@
 #!/usr/bin/python3
 """
-    This function will query a list of all hot posts on
-    a given Reddit subreddit.
+This is a recursive function that queries the Reddit API
+and returns a list containing the titles of all hot articles
+for a given subreddit.
+If no results are found for the given subreddit,
+the function should return None
 """
 
 import requests
+after = None
 
 
 def recurse(subreddit, hot_list=[]):
-    """this function will return top ten post titles recursively"""
+    """returning top ten post titles recursively"""
     global after
     user_agent = {'User-Agent': 'api_advanced-project'}
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
