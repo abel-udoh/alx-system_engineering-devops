@@ -10,6 +10,7 @@ Server monitoring: getting data about your virtual or physical server and making
 
 
 General
+
 Why is monitoring needed
 What are the 2 main area of monitoring
 What are access logs for a web server (such as Nginx)
