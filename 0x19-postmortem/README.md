@@ -36,5 +36,6 @@ the current version on our servers, we were able to swiftly fix the issue.
 
 
 PREVENTIVE ACTIONS
+
 Before delivering to a live server, we push any desired modifications first to our test environments.
 The performance metrics threshold should be raised to alert available engineers of a potential server crash.
