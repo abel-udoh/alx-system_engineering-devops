@@ -13,15 +13,15 @@ The primary cause was the failure to thoroughly verify all implemented upgrades 
 
 Timeline (all time in WAT)
 
-Time (WAT)	Actions
-11:30 AM		Implementation of upgrades starts
-12:00 PM		Server downtime starts
-12:15 AM		Pagers informed the on-call crew
-12:25 AM		On-call team recognition
-12:29 AM		Start of the rollback
-12:34 AM		Successful rollback
-12:40 AM		Server restart started
-12:45 AM		All traffic is back online
+Time (WAT)	  Actions
+11:30 AM		  Implementation of upgrades starts
+12:00 PM		  Server downtime starts
+12:15 AM		  Pagers informed the on-call crew
+12:25 AM		  On-call team recognition
+12:29 AM		  Start of the rollback
+12:34 AM		  Successful rollback
+12:40 AM		  Server restart started
+12:45 AM		  All traffic is back online
 
 
 ROOT CAUSE
