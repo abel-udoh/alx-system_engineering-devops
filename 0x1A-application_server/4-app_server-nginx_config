@@ -1,0 +1,69 @@
+# Default server configuration
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        #Use IP of server as domain name
+        server_name 54.237.103.132
+
+        #Customize HTTP response header
+        add_header X-Served-By 206668-web-01;
+
+        #Serve /airbnb-onepage/ route on AirBnb_clone_v3
+        location = /airbnb-onepage/ {
+                proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
+        }
+
+        #Serve /number_odd_or_even/ route on AirBnb_clone_v2
+        location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$ {
+                proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+        }
+
+        #Serve Airbnb_clone _v3 API
+        location /api {
+                proxy_pass http://127.0.0.1:5002/api;
+        }
+
+        error_page 404 /404.html;
+        location /404 {
+        root /var/www/html;
+        internal;
+        }
+}
+
+        # pass PHP scripts to FastCGI server
+        #
+        #location ~ \.php$ {
+        #       include snippets/fastcgi-php.conf;
+        #
+        #       # With php-fpm (or other unix sockets):
+        #       fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+        #       # With php-cgi (or other tcp sockets):
+        #       fastcgi_pass 127.0.0.1:9000;
+        #}
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        #location ~ /\.ht {
+        #       deny all;
+        #}
+
+# Virtual Host configuration for example.com
+#
+# You can move that to a different file under sites-available/ and symlink that
+# to sites-enabled/ to enable it.
+#
+#server {
+#       listen 80;
+#       listen [::]:80;
+#
+#       server_name example.com;
+#
+#       root /var/www/example.com;
+#       index index.html;
+#
+#       location / {
+#               try_files $uri $uri/ =404;
+#       }
+#}
